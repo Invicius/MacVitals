@@ -6,14 +6,19 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		6149101F306D4669002571F7 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6149101E306D4669002571F7 /* IOKit.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
-		61E31DCF306CD45500524F65 /* CPUTemperature.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CPUTemperature.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6149101E306D4669002571F7 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		61E31DCF306CD45500524F65 /* MacVitals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacVitals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		61E31DD1306CD45500524F65 /* CPUTemperature */ = {
+		61E31DD1306CD45500524F65 /* MacVitals */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = CPUTemperature;
+			path = MacVitals;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -23,16 +28,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6149101F306D4669002571F7 /* IOKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6149101D306D4669002571F7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6149101E306D4669002571F7 /* IOKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		61E31DC6306CD45500524F65 = {
 			isa = PBXGroup;
 			children = (
-				61E31DD1306CD45500524F65 /* CPUTemperature */,
+				61E31DD1306CD45500524F65 /* MacVitals */,
+				6149101D306D4669002571F7 /* Frameworks */,
 				61E31DD0306CD45500524F65 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -40,7 +55,7 @@
 		61E31DD0306CD45500524F65 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				61E31DCF306CD45500524F65 /* CPUTemperature.app */,
+				61E31DCF306CD45500524F65 /* MacVitals.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,9 +63,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		61E31DCE306CD45500524F65 /* CPUTemperature */ = {
+		61E31DCE306CD45500524F65 /* MacVitals */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 61E31DDA306CD45600524F65 /* Build configuration list for PBXNativeTarget "CPUTemperature" */;
+			buildConfigurationList = 61E31DDA306CD45600524F65 /* Build configuration list for PBXNativeTarget "MacVitals" */;
 			buildPhases = (
 				61E31DCB306CD45500524F65 /* Sources */,
 				61E31DCC306CD45500524F65 /* Frameworks */,
@@ -61,13 +76,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				61E31DD1306CD45500524F65 /* CPUTemperature */,
+				61E31DD1306CD45500524F65 /* MacVitals */,
 			);
-			name = CPUTemperature;
+			name = MacVitals;
 			packageProductDependencies = (
 			);
-			productName = CPUTemperature;
-			productReference = 61E31DCF306CD45500524F65 /* CPUTemperature.app */;
+			productName = MacVitals;
+			productReference = 61E31DCF306CD45500524F65 /* MacVitals.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -85,7 +100,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 61E31DCA306CD45500524F65 /* Build configuration list for PBXProject "CPUTemperature" */;
+			buildConfigurationList = 61E31DCA306CD45500524F65 /* Build configuration list for PBXProject "MacVitals" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -99,7 +114,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				61E31DCE306CD45500524F65 /* CPUTemperature */,
+				61E31DCE306CD45500524F65 /* MacVitals */,
 			);
 		};
 /* End PBXProject section */
@@ -254,7 +269,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3SHWADTY8C;
-				ENABLE_APP_SANDBOX = YES;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
@@ -265,13 +280,14 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.vini.CPUTemperature;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vini.MacVitals;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MacVitals/MacVitals-Bridging-Header.h";
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -286,7 +302,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3SHWADTY8C;
-				ENABLE_APP_SANDBOX = YES;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
@@ -297,13 +313,14 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.vini.CPUTemperature;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vini.MacVitals;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MacVitals/MacVitals-Bridging-Header.h";
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -312,7 +329,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		61E31DCA306CD45500524F65 /* Build configuration list for PBXProject "CPUTemperature" */ = {
+		61E31DCA306CD45500524F65 /* Build configuration list for PBXProject "MacVitals" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				61E31DD8306CD45600524F65 /* Debug */,
@@ -321,7 +338,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		61E31DDA306CD45600524F65 /* Build configuration list for PBXNativeTarget "CPUTemperature" */ = {
+		61E31DDA306CD45600524F65 /* Build configuration list for PBXNativeTarget "MacVitals" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				61E31DDB306CD45600524F65 /* Debug */,
